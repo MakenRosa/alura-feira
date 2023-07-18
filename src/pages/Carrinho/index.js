@@ -2,12 +2,14 @@ import { Button, Snackbar, InputLabel } from '@material-ui/core';
 import MuiAlert from '@material-ui/lab/Alert';
 import { useState } from 'react';
 import { Container, Voltar, TotalContainer, PagamentoContainer} from './styles';
+import { useHistory } from 'react-router-dom';
 
 function Carrinho() {
   const [openSnackbar, setOpenSnackbar] = useState(false);
+  const history = useHistory();
   return (
     <Container>
-      <Voltar />
+      <Voltar onClick={() => history.push('/feira')} />
       <h2>
         Carrinho
       </h2>
