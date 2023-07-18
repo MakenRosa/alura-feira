@@ -1,56 +1,63 @@
 import { Button } from '@material-ui/core';
 import {
   Container,
-  Titulo,
+  Title,
   InputContainer
 } from './styles';
-import {
+import { 
   Input,
   InputLabel,
-  InputAdornment 
+  InputAdornment
 } from '@material-ui/core';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-function Login({ nome, setNome, saldo, setSaldo }) {
+function Login({ name, setName, balance, setBalance }) {
   const history = useHistory();
+
   return (
     <Container>
-      <Titulo>
-        Insira o seu nome
-      </Titulo>
+      <Title>
+        Enter your name
+      </Title>
+
       <InputContainer>
         <InputLabel>
-          Nome
+          Name
         </InputLabel>
+
         <Input
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          type="text" 
         />
       </InputContainer>
+
       <InputContainer>
         <InputLabel>
-          Saldo
+          Balance
         </InputLabel>
+
         <Input
-        value={saldo}
-        onChange={(e) => setSaldo(e.target.value)}
-        type="number"
-        startAdornment={
-          <InputAdornment position="start">
-            R$
-          </InputAdornment>
-        }
-      />
+          value={balance}
+          onChange={(e) => setBalance(e.target.value)}
+          type="number"
+          startAdornment={
+            <InputAdornment position="start">
+              $
+            </InputAdornment>
+          }
+        />
       </InputContainer>
+
       <Button
-        onClick={() => history.push('/feira')}
+        onClick={() => history.push('/market')}
         variant="contained"
-        color="primary">
-        Avançar
+        color="primary"
+      >
+        Next
       </Button>
     </Container>
-  )
-};
+  );
+}
 
 export default Login;
