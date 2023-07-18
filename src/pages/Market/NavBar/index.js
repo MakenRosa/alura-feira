@@ -10,7 +10,7 @@ export default function NavBar() {
   return (
     <Nav>
       <Logo />
-      <IconButton onClick={() => history.push('/carrinho')}>
+      <IconButton onClick={() => history.push('/cart')}>
         <Badge
           color="primary"
         >
