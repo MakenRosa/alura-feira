@@ -1,22 +1,26 @@
 import Cart from 'pages/Cart' 
 import Market from 'pages/Market'
 import Login from 'pages/Login'
-import { useState } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { UserProvider } from 'common/context/User'
+import { CartProvider } from 'common/context/Cart'
 
 function Router() {
-  const [name, setName] = useState('')
-  const [balance, setBalance] = useState(0)
+
 
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact>
-          <Login name={name} setName={setName} balance={balance} setBalance={setBalance} /> 
-        </Route>
-        <Route path="/market">
-          <Market />
-        </Route>
+        <UserProvider>
+          <Route path="/" exact>
+            <Login /> 
+          </Route>
+          <CartProvider>
+            <Route path="/market">
+              <Market />
+            </Route>
+          </CartProvider>
+        </UserProvider>
         <Route path="/cart">
           <Cart />
         </Route>
