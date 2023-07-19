@@ -1,63 +1,67 @@
 import { Button } from '@material-ui/core';
 import {
-  Container,
-  Title,
-  InputContainer
+	Container,
+	Title,
+	InputContainer
 } from './styles';
 import { 
-  Input,
-  InputLabel,
-  InputAdornment
+	Input,
+	InputLabel,
+	InputAdornment
 } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
+import { UserContext } from 'common/context/User';
+import { useContext } from 'react';
 
-function Login({ name, setName, balance, setBalance }) {
-  const history = useHistory();
+function Login() {
+	const history = useHistory();
+	const { name, setName, balance, setBalance} = useContext(UserContext);
 
-  return (
-    <Container>
-      <Title>
+	return (
+		<Container>
+			<Title>
         Enter your name
-      </Title>
+			</Title>
 
-      <InputContainer>
-        <InputLabel>
+			<InputContainer>
+				<InputLabel>
           Name
-        </InputLabel>
+				</InputLabel>
 
-        <Input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          type="text" 
-        />
-      </InputContainer>
+				<Input
+					value={name}
+					onChange={(e) => setName(e.target.value)}
+					type="text" 
+				/>
+			</InputContainer>
 
-      <InputContainer>
-        <InputLabel>
+			<InputContainer>
+				<InputLabel>
           Balance
-        </InputLabel>
+				</InputLabel>
 
-        <Input
-          value={balance}
-          onChange={(e) => setBalance(e.target.value)}
-          type="number"
-          startAdornment={
-            <InputAdornment position="start">
+				<Input
+					value={balance}
+					onChange={(e) => setBalance(e.target.value)}
+					type="number"
+					startAdornment={
+						<InputAdornment position="start">
               $
-            </InputAdornment>
-          }
-        />
-      </InputContainer>
+						</InputAdornment>
+					}
+				/>
+			</InputContainer>
 
-      <Button
-        onClick={() => history.push('/market')}
-        variant="contained"
-        color="primary"
-      >
+			<Button
+				onClick={() => history.push('/market')}
+				variant="contained"
+				color="primary"
+				disabled={name.length < 3 || balance < 1.80}
+			>
         Next
-      </Button>
-    </Container>
-  );
+			</Button>
+		</Container>
+	);
 }
 
 export default Login;

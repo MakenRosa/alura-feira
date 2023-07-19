@@ -25,7 +25,7 @@ export const Container = styled.main`
 `;
 
 export const BackButton = styled(IconButton).attrs({
-  children: <ArrowBackIcon /> 
+	children: <ArrowBackIcon /> 
 })`
   left: 20px;
   position: absolute;
