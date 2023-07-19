@@ -18,4 +18,4 @@ export const Title = styled.h2`
 
 export const InputContainer = styled(FormControl)`
   margin-bottom: 30px;
-`
+`;
