@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# Feira
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto desenvolvido durante o curso "React: gerenciamento de estados globais com ContextAPI" da Alura. (10 horas, Concluído)
 
-## Available Scripts
+Durante o curso, aprendi conceitos avançados de gerenciamento de estados em aplicações React, usando a ContextAPI. Os principais tópicos abordados foram:
 
-In the project directory, you can run:
+- Criação e gerenciamento de estados globais com a ContextAPI.
+- Desacoplar componentes, tornando-os responsáveis apenas pela renderização.
+- Utilização das melhores práticas e recursos avançados que a ContextAPI pode oferecer.
+- Criação de hooks customizados para uso conjunto com outros hooks do React e a ContextAPI.
+- Melhoria da limpeza do código e performance por meio da adoção de boas práticas.
+- Desenvolvimento de código baseado no princípio da responsabilidade única, facilitando a manutenção do projeto.
 
-### `yarn start`
+**[Acesse aqui o Alura-Feira pelo Vercel](https://alura-feira-tan.vercel.app/)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Como clonar o repositório
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Siga as etapas abaixo para clonar este repositório e executar o projeto em sua máquina local:
 
-### `yarn test`
+1. Certifique-se de ter o Git instalado em sua máquina. Você pode fazer o download e instalar o Git a partir do [site oficial do Git](https://git-scm.com/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Abra o terminal ou prompt de comando.
 
-### `yarn build`
+3. Navegue até o diretório onde deseja clonar o repositório.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Execute o seguinte comando para clonar o repositório:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+``` bash
+git clone https://github.com/makenrosa/alura-feira.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Após o término do processo de clonagem, você terá uma cópia local do repositório em seu computador.
 
-### `yarn eject`
+## Executando o projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para executar o projeto React, siga as etapas abaixo:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Navegue até o diretório onde você clonou o repositório.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Abra o terminal ou prompt de comando.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. Certifique-se de ter o Node.js instalado em sua máquina. Você pode fazer o download e instalar o Node.js a partir do [site oficial do Node.js](https://nodejs.org/).
 
-## Learn More
+4. Execute o seguinte comando para instalar as dependências do projeto:
+    
+``` bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Após a conclusão da instalação das dependências, execute o seguinte comando para iniciar o servidor de desenvolvimento:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+``` bash
+npm start
+```
 
-### Code Splitting
+6. O servidor de desenvolvimento será iniciado e você poderá acessar a aplicação no seu navegador através do endereço `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Estrutura do projeto
 
-### Analyzing the Bundle Size
+A estrutura do projeto está da seguinte forma:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```Feira/
+├── public/
+│   ├── assets/
+│   │   ├── broccoli.png
+│   │   ├── cucumber.png
+│   │   ├── potato.png
+│   │   ├── tomato.png
+│   │   └── pumpkin.png
+│   └── index.html
+├── src/
+│   ├── assets/
+│   │   └── logo.svg
+│   ├── common/
+│   │   └── context/
+│   │       ├── Cart.js
+│   │       ├── Payment.js
+│   │       └── User.js
+│   ├── components/
+│   │   └── Product/
+│   │       ├── index.js
+│   │       └── styles.js
+│   ├── pages/
+│   │   ├── Cart/
+│   │   │   ├── index.js
+│   │   │   └── styles.js
+│   │   ├── Login/
+│   │   │   ├── index.js
+│   │   │   └── styles.js
+│   │   └── Market/
+│   │       ├── Navbar/
+│   │       │   ├── index.js
+│   │       │   └── styles.js
+│   │       ├── market.json
+│   │       ├── index.js
+│   │       └── styles.js
+│   ├── routes.js
+│   ├── index.js
+│   └── index.css
+├── .gitignore
+├── .eslintrc.json
+├── jsconfig.json
+├── package.json
+└── package-lock.json
+```
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `public/`: Contém a pasta `assets/` que hospeda as imagens utilizadas no projeto (`broccoli.png`, `cucumber.png`, `potato.png`, `tomato.png`, `pumpkin.png`) e o arquivo `index.html`.
 
-### Advanced Configuration
+- `src/`: Contém o código-fonte da aplicação.
+  - `assets/`: Contém a logo do projeto (`logo.svg`).
+  - `common/context/`: Contém os contextos do React (`Cart.js`, `Payment.js`, `User.js`) usados para gerenciar estados globais.
+  - `components/`: Contém os componentes reutilizáveis da aplicação. Por exemplo, `Product/` que possui seu próprio arquivo JavaScript (`index.js`) e estilos CSS (`styles.js`).
+   
+- `src/pages/`: Contém as páginas principais da aplicação, como `Cart`, `Login`, e `Market`. Cada página possui seu próprio arquivo JavaScript e um arquivo de estilos correspondente. Além disso, `Market/` contém um componente adicional, `Navbar/`, um arquivo JSON com dados do mercado (`market.json`).
+   
+- `src/routes.js`: Gerencia as rotas da aplicação.
+- `src/index.js`: É o ponto de entrada da aplicação React.
+- `src/index.css`: Contém os estilos globais.
+   
+- `.gitignore`: Usado para especificar os arquivos e diretórios que o Git deve ignorar.
+   
+- `.eslintrc.json`: Usado para configurar o ESLint, uma ferramenta para identificar e relatar padrões encontrados no código JavaScript.
+   
+- `jsconfig.json`: Usado para configurar o ambiente de desenvolvimento JavaScript.
+   
+- `package.json`: É o arquivo de configuração do projeto Node.js, que contém as dependências e scripts do projeto.
+   
+- `package-lock.json`: É um arquivo gerado automaticamente pelo npm para travar as versões exatas das dependências instaladas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Certifique-se de que todos esses arquivos e diretórios estejam presentes corretamente em seu projeto ao clonar o repositório.
 
-### Deployment
+## Contribuição
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Este é um projeto desenvolvido como parte de um curso da Alura e, portanto, não é aberto para contribuições externas no momento. No entanto, sinta-se à vontade para fazer um fork deste repositório e personalizá-lo conforme suas necessidades.
 
-### `yarn build` fails to minify
+Se você encontrar algum problema ou tiver sugestões, sinta-se à vontade para abrir uma [issue](https://github.com/makenrosa/alura-feira/issues) neste repositório.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Aproveite o projeto! Se tiver alguma dúvida, não hesite em entrar em contato.
