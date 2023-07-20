@@ -47,18 +47,18 @@ function Cart() {
 				</div>
 				<div>
 					<h2>Total in Cart:</h2>
-					<span>$ {totalInCart.toFixed(2)}</span>
+					<span>$ {Number(totalInCart).toFixed(2)}</span>
 				</div>
 				<div>
 					{difference > 0 ? (
 						<>
 							<h2>Discount:</h2>
-							<span>$ -{difference}</span>
+							<span>$ -{Number(difference).toFixed(2)}</span>
 						</>
 					) : (
 						<>
 							<h2>Interest:</h2>
-							<span>$ +{difference*-1}</span>
+							<span>$ +{Number(difference*-1).toFixed(2)}</span>
 						</>
 					)}
 
@@ -66,7 +66,7 @@ function Cart() {
 
 				<div>
 					<h2> Total Balance: </h2>
-					<span> $ {totalBalance.toFixed(2)} </span>
+					<span> $ {Number(totalBalance).toFixed(2)} </span>
 				</div>
 			</TotalContainer>
 			<Button 
