@@ -11,7 +11,7 @@ Durante o curso, aprendi conceitos avançados de gerenciamento de estados em apl
 - Melhoria da limpeza do código e performance por meio da adoção de boas práticas.
 - Desenvolvimento de código baseado no princípio da responsabilidade única, facilitando a manutenção do projeto.
 
-**[Acesse aqui o Alura-Feira pelo Vercel](https://alura-feira-tan.vercel.app/)**
+**[Acesse aqui o Feira pelo Vercel]()**
 
 ## Como clonar o repositório
 
@@ -26,7 +26,7 @@ Siga as etapas abaixo para clonar este repositório e executar o projeto em sua 
 4. Execute o seguinte comando para clonar o repositório:
 
 ``` bash
-git clone https://github.com/makenrosa/alura-feira.git
+git clone https://github.com/makenrosa/feira.git
 ```
 
 5. Após o término do processo de clonagem, você terá uma cópia local do repositório em seu computador.
@@ -134,6 +134,6 @@ Certifique-se de que todos esses arquivos e diretórios estejam presentes corret
 
 Este é um projeto desenvolvido como parte de um curso da Alura e, portanto, não é aberto para contribuições externas no momento. No entanto, sinta-se à vontade para fazer um fork deste repositório e personalizá-lo conforme suas necessidades.
 
-Se você encontrar algum problema ou tiver sugestões, sinta-se à vontade para abrir uma [issue](https://github.com/makenrosa/alura-feira/issues) neste repositório.
+Se você encontrar algum problema ou tiver sugestões, sinta-se à vontade para abrir uma [issue](https://github.com/makenrosa/feira/issues) neste repositório.
 
 Aproveite o projeto! Se tiver alguma dúvida, não hesite em entrar em contato.
