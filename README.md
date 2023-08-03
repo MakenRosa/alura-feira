@@ -11,7 +11,7 @@ Durante o curso, aprendi conceitos avançados de gerenciamento de estados em apl
 - Melhoria da limpeza do código e performance por meio da adoção de boas práticas.
 - Desenvolvimento de código baseado no princípio da responsabilidade única, facilitando a manutenção do projeto.
 
-**[Acesse aqui o Feira pelo Vercel]()**
+**[Acesse aqui o Feira pelo Vercel](https://feira-ashy.vercel.app/)**
 
 ## Como clonar o repositório
 
